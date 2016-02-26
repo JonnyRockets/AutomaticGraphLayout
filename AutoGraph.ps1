@@ -50,17 +50,3 @@ function DoGraph {
         $null=$form.ShowDialog()
     }
 }
-
-#cls
-
-#Get-AssociatedClassRelationship | % {
-#    [psobject]@{source=$_.LinkedClassName1;target=$_.AssociationClassName}
-#    [psobject]@{source=$_.AssociationClassName;target=$_.LinkedClassName2}
-#} | DoGraph -layoutSettings MdsLayoutSettings
-
-#ps | ? company | select @{n='source';e={$_.company}},@{n='target';e={$_.name}} | DoGraph 
-#ps | ? company  | DoGraph -map company,name
-#gsv | DoGraph -map starttype,displayname
-#gsv | DoGraph -map ServiceType,displayname
-#gsv | DoGraph -map ServiceHandle,displayname
-#gsv | DoGraph canstop,displayname
